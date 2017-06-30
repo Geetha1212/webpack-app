@@ -1,0 +1,20 @@
+{
+  "name": "webpack_app",
+  "version": "1.0.0",
+  "description": "Sample Webpack App",
+  "main": "app.js",
+  "author": "Geetha G",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "hot": "webpack-dev-server --entry ./src/js/app.js --output-filename ./dist/bundle.js"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "style-loader": "^0.18.2",
+    "webpack-dev-server": "^2.5.0"
+  }
+}
