@@ -1,14 +1,18 @@
 module.exports = {
-  entry: './src/js/app.js',
+  //https://webpack.github.io/docs/multiple-entry-points.html
+  entry: {
+    a: "./src/js/app.js",
+    b: "./src/js/app2.js"
+  },
   output: {
-    path: __dirname+'/dist',
-    filename: 'bundle.js'
+    path: __dirname + '/dist',
+    filename: "[name]-bundle.js"
   },
   module: {
-    loaders : [
+    loaders: [
       {
         test: /\.css$/,
-        loader : "style-loader!css-loader"
+        loader: "style-loader!css-loader"
       }
     ]
   }
