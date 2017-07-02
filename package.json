@@ -6,8 +6,9 @@
   "author": "Geetha G",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
-    "hot": "webpack-dev-server"
+    "build": "npm run clean && webpack",
+    "hot": "webpack-dev-server",
+    "clean": "rimraf ./dist/*"
   },
   "dependencies": {
     "jquery": "^3.2.1"
@@ -21,6 +22,7 @@
     "extract-text-webpack-plugin": "^2.1.2",
     "html-webpack-plugin": "^2.29.0",
     "node-sass": "^4.5.3",
+    "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "stylus-loader": "^3.0.1",

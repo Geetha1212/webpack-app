@@ -8,6 +8,7 @@
 * Simple Webpack app with Single Bundle
 * can have dev mode and production build
 * dev mode uses webpack dev server for hot reloading npm run hot
+* Difference between webpack -d / webpack --watch and webpack-dev-server is , dev server have bundles in memory and not write into the disk
 * production mode generates build file in dist/bundle.js
 
 #### __Version [#1.1.0](https://github.com/Geetha1212/webpack-app/releases/tag/1.1.0)__
@@ -25,4 +26,9 @@
 #### __Version [#1.3.0](https://github.com/Geetha1212/webpack-app/releases/tag/1.3.0)__
 * Added Support for extract-text-webpack-plugin
 * This plugin is used to separate out CSS modules from bundled js chunks into separate CSS file.
-* When you look at the auto generated dist/index.html , you can notice css file include apart from JS bundle includes.
+* When you look at the auto generated index.html in root directory , you can notice css file include apart from JS bundle includes.
+
+#### __Version [#1.3.1](https://github.com/Geetha1212/webpack-app/releases/tag/1.3.1)__
+* Added options to webpack-dev-server as configuration
+* Clean the dist directory before new build using rimraf
+* Moved the generated index.html to the root folder from inside dist/

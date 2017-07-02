@@ -34,12 +34,16 @@ module.exports = {
   plugins: [
     new HTMLWebpackPlugin({
       title: "Webpack Demo Title set in conf file",
-      template: "./src/index.html"
+      template: "./src/index.html",
+      filename: "./../index.html"
     }),
     new ExtractTextWebpackPlugin("styles.css")
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    inline: true
+    // contentBase: path.join(__dirname, 'dist'),
+    inline: true,
+    compress: true,
+    port: 9000,
+    open: true
   }
 }
