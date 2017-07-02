@@ -21,3 +21,8 @@
 * Added Support for SaSS files with Sassloader and node-sass
 * Added config for devServer inside webpack.config.js
 * Added HTML Plugin to create index.html automatically with the webpack bundled script based on template
+
+#### __Version [#1.3.0](https://github.com/Geetha1212/webpack-app/releases/tag/1.3.0)__
+* Added Support for extract-text-webpack-plugin
+* This plugin is used to separate out CSS modules from bundled js chunks into separate CSS file.
+* When you look at the auto generated dist/index.html , you can notice css file include apart from JS bundle includes.

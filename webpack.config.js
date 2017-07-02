@@ -1,5 +1,6 @@
 var path = require('path');
 var HTMLWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   //https://webpack.github.io/docs/multiple-entry-points.html
@@ -15,7 +16,12 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader" ]
+        use: ExtractTextWebpackPlugin.extract(
+          {
+            fallback: "style-loader" ,
+            use: [ "css-loader", "sass-loader" ]
+          }
+        )
       },
       {
         test: /\.js$/,
@@ -29,7 +35,8 @@ module.exports = {
     new HTMLWebpackPlugin({
       title: "Webpack Demo Title set in conf file",
       template: "./src/index.html"
-    })
+    }),
+    new ExtractTextWebpackPlugin("styles.css")
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
