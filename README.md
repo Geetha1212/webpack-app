@@ -32,3 +32,9 @@
 * Added options to webpack-dev-server as configuration
 * Clean the dist directory before new build using rimraf
 * Moved the generated index.html to the root folder from inside dist/
+
+#### __Version [#1.4.0](https://github.com/Geetha1212/webpack-app/releases/tag/1.4.0)__
+* Enable HOT Module Replacement
+* environment based css file generation. In Production build, use extract text webpack plugin to generate css. In development mode, the css file will not be extracted and would be available from memory
+*  https://www.youtube.com/watch?v=faFJw1wjQLE&list=PLkEZWD8wbltnRp6nRR8kv97RbpcUdNawY&index=9
+* https://www.youtube.com/watch?v=NtyzJMi-a-M&index=10&list=PLkEZWD8wbltnRp6nRR8kv97RbpcUdNawY
